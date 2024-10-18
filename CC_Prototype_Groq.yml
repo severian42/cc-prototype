@@ -1,0 +1,2587 @@
+app:
+  description: ''
+  icon: ✍️
+  icon_background: '#FFEAD5'
+  mode: advanced-chat
+  name: SummarizeAI
+  use_icon_as_answer_icon: true
+kind: app
+version: 0.1.2
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+    opening_statement: ''
+    retriever_resource:
+      enabled: false
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        sourceType: start
+        targetType: llm
+      id: 1711528708197-source-17284992856990-target
+      source: '1711528708197'
+      sourceHandle: source
+      target: '17284992856990'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: code
+      id: 17284992856990-source-1728506860710-target
+      source: '17284992856990'
+      sourceHandle: source
+      target: '1728506860710'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: llm
+      id: 1728506860710-source-1728499342927-target
+      source: '1728506860710'
+      sourceHandle: source
+      target: '1728499342927'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: code
+      id: 17284992856990-source-17285076478780-target
+      source: '17284992856990'
+      sourceHandle: source
+      target: '17285076478780'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: llm
+      id: 17285076478780-source-17284997857760-target
+      source: '17285076478780'
+      sourceHandle: source
+      target: '17284997857760'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: code
+      id: 17284992856990-source-17285076535550-target
+      source: '17284992856990'
+      sourceHandle: source
+      target: '17285076535550'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: llm
+      id: 17285076535550-source-17284998508340-target
+      source: '17285076535550'
+      sourceHandle: source
+      target: '17284998508340'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: knowledge-retrieval
+      id: 1728499342927-source-1711528768556-target
+      source: '1728499342927'
+      sourceHandle: source
+      target: '1711528768556'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: knowledge-retrieval
+      id: 17284997857760-source-1711528770201-target
+      source: '17284997857760'
+      sourceHandle: source
+      target: '1711528770201'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: knowledge-retrieval
+      id: 17284998508340-source-17284980569620-target
+      source: '17284998508340'
+      sourceHandle: source
+      target: '17284980569620'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: knowledge-retrieval
+        targetType: variable-aggregator
+      id: 1711528768556-source-1728510226142-target
+      source: '1711528768556'
+      sourceHandle: source
+      target: '1728510226142'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: variable-aggregator
+        targetType: llm
+      id: 1728510226142-source-1711528815414-target
+      source: '1728510226142'
+      sourceHandle: source
+      target: '1711528815414'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: knowledge-retrieval
+        targetType: variable-aggregator
+      id: 1711528770201-source-17285103032100-target
+      source: '1711528770201'
+      sourceHandle: source
+      target: '17285103032100'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: knowledge-retrieval
+        targetType: variable-aggregator
+      id: 17284980569620-source-17285103759130-target
+      source: '17284980569620'
+      sourceHandle: source
+      target: '17285103759130'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: variable-aggregator
+        targetType: llm
+      id: 17285103032100-source-17285098919410-target
+      source: '17285103032100'
+      sourceHandle: source
+      target: '17285098919410'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: variable-aggregator
+        targetType: llm
+      id: 17285103759130-source-17285099013650-target
+      source: '17285103759130'
+      sourceHandle: source
+      target: '17285099013650'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: start
+        targetType: tool
+      id: 1711528708197-source-1728571538391-target
+      source: '1711528708197'
+      sourceHandle: source
+      target: '1728571538391'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: tool
+        targetType: variable-aggregator
+      id: 1728571538391-source-1728510226142-target
+      source: '1728571538391'
+      sourceHandle: source
+      target: '1728510226142'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: start
+        targetType: tool
+      id: 1711528708197-source-17285716459190-target
+      source: '1711528708197'
+      sourceHandle: source
+      target: '17285716459190'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: tool
+        targetType: variable-aggregator
+      id: 17285716459190-source-17285103032100-target
+      source: '17285716459190'
+      sourceHandle: source
+      target: '17285103032100'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: start
+        targetType: tool
+      id: 1711528708197-source-17285716874730-target
+      source: '1711528708197'
+      sourceHandle: source
+      target: '17285716874730'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: tool
+        targetType: variable-aggregator
+      id: 17285716874730-source-17285103759130-target
+      source: '17285716874730'
+      sourceHandle: source
+      target: '17285103759130'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: variable-aggregator
+      id: 1711528815414-source-17285105504790-target
+      source: '1711528815414'
+      sourceHandle: source
+      target: '17285105504790'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: variable-aggregator
+      id: 17285098919410-source-17285105504790-target
+      source: '17285098919410'
+      sourceHandle: source
+      target: '17285105504790'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: variable-aggregator
+      id: 17285099013650-source-17285105504790-target
+      source: '17285099013650'
+      sourceHandle: source
+      target: '17285105504790'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: tool
+      id: 17285737847610-source-1728592461145-target
+      source: '17285737847610'
+      sourceHandle: source
+      target: '1728592461145'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: tool
+        targetType: variable-aggregator
+      id: 1728592461145-source-1728574540053-target
+      source: '1728592461145'
+      sourceHandle: source
+      target: '1728574540053'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: variable-aggregator
+        targetType: llm
+      id: 1728574540053-source-17285109422410-target
+      source: '1728574540053'
+      sourceHandle: source
+      target: '17285109422410'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: variable-aggregator
+        targetType: llm
+      id: 17285105504790-source-17285737847610-target
+      source: '17285105504790'
+      sourceHandle: source
+      target: '17285737847610'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: variable-aggregator
+        targetType: variable-aggregator
+      id: 17285105504790-source-1728593613737-target
+      source: '17285105504790'
+      sourceHandle: source
+      target: '1728593613737'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: variable-aggregator
+        targetType: variable-aggregator
+      id: 1728593613737-source-1728574540053-target
+      source: '1728593613737'
+      sourceHandle: source
+      target: '1728574540053'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: tool
+      id: 17285737847610-source-1728594085610-target
+      source: '17285737847610'
+      sourceHandle: source
+      target: '1728594085610'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: tool
+        targetType: variable-aggregator
+      id: 1728594085610-source-1728574540053-target
+      source: '1728594085610'
+      sourceHandle: source
+      target: '1728574540053'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: template-transform
+        targetType: llm
+      id: 1728659963759-source-1728659317649-target
+      source: '1728659963759'
+      sourceHandle: source
+      target: '1728659317649'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: tool
+      id: 17286602571650-source-1728498525620-target
+      source: '17286602571650'
+      sourceHandle: source
+      target: '1728498525620'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: tool
+        targetType: variable-aggregator
+      id: 1728498525620-source-1728510226142-target
+      source: '1728498525620'
+      sourceHandle: source
+      target: '1728510226142'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: llm
+      id: 1728506860710-source-17286602571650-target
+      source: '1728506860710'
+      sourceHandle: source
+      target: '17286602571650'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: tool
+      id: 17286602800460-source-17284985881090-target
+      source: '17286602800460'
+      sourceHandle: source
+      target: '17284985881090'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: tool
+        targetType: variable-aggregator
+      id: 17284985881090-source-17285103032100-target
+      source: '17284985881090'
+      sourceHandle: source
+      target: '17285103032100'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: llm
+      id: 17285076478780-source-17286602800460-target
+      source: '17285076478780'
+      sourceHandle: source
+      target: '17286602800460'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: tool
+      id: 17286603081920-source-17284985936280-target
+      source: '17286603081920'
+      sourceHandle: source
+      target: '17284985936280'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: tool
+        targetType: variable-aggregator
+      id: 17284985936280-source-17285103759130-target
+      source: '17284985936280'
+      sourceHandle: source
+      target: '17285103759130'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: llm
+      id: 17285076535550-source-17286603081920-target
+      source: '17285076535550'
+      sourceHandle: source
+      target: '17286603081920'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: parameter-extractor
+      id: 1728659317649-source-1728665246556-target
+      source: '1728659317649'
+      sourceHandle: source
+      target: '1728665246556'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: variable-aggregator
+        targetType: variable-aggregator
+      id: 1728574540053-source-1728659524318-target
+      source: '1728574540053'
+      sourceHandle: source
+      target: '1728659524318'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: variable-aggregator
+        targetType: template-transform
+      id: 1728659524318-source-1728659963759-target
+      source: '1728659524318'
+      sourceHandle: source
+      target: '1728659963759'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: answer
+      id: 17285109422410-source-1711528835179-target
+      source: '17285109422410'
+      sourceHandle: source
+      target: '1711528835179'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: answer
+        targetType: answer
+      id: 1711528835179-source-1728665809969-target
+      source: '1711528835179'
+      sourceHandle: source
+      target: '1728665809969'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: parameter-extractor
+        targetType: tool
+      id: 1728665246556-source-1728665847646-target
+      source: '1728665246556'
+      sourceHandle: source
+      target: '1728665847646'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: tool
+        targetType: answer
+      id: 1728665847646-source-1728665809969-target
+      source: '1728665847646'
+      sourceHandle: source
+      target: '1728665809969'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: parameter-extractor
+      id: 1728659317649-source-17286660442350-target
+      source: '1728659317649'
+      sourceHandle: source
+      target: '17286660442350'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: parameter-extractor
+        targetType: tool
+      id: 17286660442350-source-1728666147402-target
+      source: '17286660442350'
+      sourceHandle: source
+      target: '1728666147402'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: tool
+        targetType: answer
+      id: 1728666147402-source-1728665809969-target
+      source: '1728666147402'
+      sourceHandle: source
+      target: '1728665809969'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: answer
+        targetType: answer
+      id: 1728665809969-source-1728666356996-target
+      source: '1728665809969'
+      sourceHandle: source
+      target: '1728666356996'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: Define the initial parameters for launching a workflow
+        selected: false
+        title: Start
+        type: start
+        variables:
+        - label: url_market
+          max_length: 256
+          options: []
+          required: false
+          type: text-input
+          variable: url_market
+        - label: url_customer
+          max_length: 256
+          options: []
+          required: false
+          type: text-input
+          variable: url_customer
+        - label: url_financial
+          max_length: 256
+          options: []
+          required: false
+          type: text-input
+          variable: url_financial
+      height: 186
+      id: '1711528708197'
+      position:
+        x: -685.29181851981
+        y: 432.4846628040216
+      positionAbsolute:
+        x: -685.29181851981
+        y: 432.4846628040216
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        dataset_ids:
+        - 6084ed3f-d100-4df2-a277-b40d639ea7c6
+        - 0e6a8774-3341-4643-a185-cf38bedfd7fe
+        - 14bc8182-0e39-4307-a61b-f408db3e0c6d
+        desc: 'Retrieve knowledge on after sales SOP. '
+        multiple_retrieval_config:
+          reranking_enable: true
+          reranking_mode: weighted_score
+          reranking_model:
+            model: jina-reranker-v2-base-multilingual
+            provider: jina
+          score_threshold: null
+          top_k: 4
+          weights:
+            keyword_setting:
+              keyword_weight: 0.5
+            vector_setting:
+              embedding_model_name: unclemusclez/jina-embeddings-v2-base-code:latest
+              embedding_provider_name: ollama
+              vector_weight: 0.5
+        query_variable_selector:
+        - '1728499342927'
+        - text
+        retrieval_mode: multiple
+        selected: false
+        single_retrieval_config:
+          model:
+            completion_params: {}
+            mode: chat
+            name: gpt-3.5-turbo
+            provider: openai
+        title: Market KB
+        type: knowledge-retrieval
+      dragging: false
+      height: 120
+      id: '1711528768556'
+      position:
+        x: 908.7499445197068
+        y: 432.4846628040216
+      positionAbsolute:
+        x: 908.7499445197068
+        y: 432.4846628040216
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        dataset_ids:
+        - 6084ed3f-d100-4df2-a277-b40d639ea7c6
+        - 9a3d1ad0-80a1-4924-9ed4-b4b4713a2feb
+        - 14bc8182-0e39-4307-a61b-f408db3e0c6d
+        desc: 'Retrieval knowledge about out products. '
+        multiple_retrieval_config:
+          reranking_enable: true
+          reranking_mode: weighted_score
+          reranking_model:
+            model: jina-reranker-v2-base-multilingual
+            provider: jina
+          score_threshold: null
+          top_k: 4
+          weights:
+            keyword_setting:
+              keyword_weight: 0.5
+            vector_setting:
+              embedding_model_name: unclemusclez/jina-embeddings-v2-base-code:latest
+              embedding_provider_name: ollama
+              vector_weight: 0.5
+        query_variable_selector:
+        - '17284997857760'
+        - text
+        retrieval_mode: multiple
+        selected: false
+        single_retrieval_config:
+          model:
+            completion_params: {}
+            mode: chat
+            name: gpt-3.5-turbo
+            provider: openai
+        title: Customer KB
+        type: knowledge-retrieval
+      dragging: false
+      height: 120
+      id: '1711528770201'
+      position:
+        x: 908.7499445197068
+        y: 757.141030699645
+      positionAbsolute:
+        x: 908.7499445197068
+        y: 757.141030699645
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1728510226142'
+          - Group1
+        desc: ''
+        memory:
+          query_prompt_template: '{{#sys.query#}}'
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: false
+            size: 50
+        model:
+          completion_params:
+            frequency_penalty: 0
+            max_tokens: 512
+            presence_penalty: 0
+            temperature: 0.5
+            top_p: 1
+          mode: chat
+          name: llama-3.1-8b-instant
+          provider: groq
+        prompt_template:
+        - id: 6a95fc20-5a7c-4fd4-a577-9cdd9b5ccf98
+          role: system
+          text: 'Use the following context as your learned knowledge, inside <context></context>
+            XML tags.
+
+            <context>
+
+            {{#context#}}
+
+            {{#1728510226142.Group1#}}
+
+            </context>'
+        selected: false
+        title: Market AGG
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      dragging: false
+      height: 98
+      id: '1711528815414'
+      position:
+        x: 1545.4999404373439
+        y: 432.4846628040216
+      positionAbsolute:
+        x: 1545.4999404373439
+        y: 432.4846628040216
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: '{{#17285109422410.text#}}'
+        desc: ''
+        selected: false
+        title: Answer
+        type: answer
+        variables:
+        - value_selector:
+          - '1711528815414'
+          - text
+          variable: text
+      dragging: false
+      height: 107
+      id: '1711528835179'
+      position:
+        x: 4827.605413567987
+        y: 883.5178069476167
+      positionAbsolute:
+        x: 4827.605413567987
+        y: 883.5178069476167
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        dataset_ids:
+        - 6084ed3f-d100-4df2-a277-b40d639ea7c6
+        - 9a3d1ad0-80a1-4924-9ed4-b4b4713a2feb
+        - 14bc8182-0e39-4307-a61b-f408db3e0c6d
+        desc: 'Retrieval knowledge about out products. '
+        multiple_retrieval_config:
+          reranking_enable: true
+          reranking_mode: weighted_score
+          reranking_model:
+            model: jina-reranker-v2-base-multilingual
+            provider: jina
+          score_threshold: null
+          top_k: 4
+          weights:
+            keyword_setting:
+              keyword_weight: 0.5
+            vector_setting:
+              embedding_model_name: unclemusclez/jina-embeddings-v2-base-code:latest
+              embedding_provider_name: ollama
+              vector_weight: 0.5
+        query_variable_selector:
+        - '17284998508340'
+        - text
+        retrieval_mode: multiple
+        selected: false
+        single_retrieval_config:
+          model:
+            completion_params: {}
+            mode: chat
+            name: gpt-3.5-turbo
+            provider: openai
+        title: Financial KB
+        type: knowledge-retrieval
+      height: 120
+      id: '17284980569620'
+      position:
+        x: 908.7499445197068
+        y: 1048.3835840228292
+      positionAbsolute:
+        x: 908.7499445197068
+        y: 1048.3835840228292
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        provider_id: serper
+        provider_name: serper
+        provider_type: builtin
+        selected: false
+        title: Market Serper
+        tool_configurations: {}
+        tool_label: Serper
+        tool_name: serper
+        tool_parameters:
+          query:
+            type: mixed
+            value: '{{#1728499342927.text#}}'
+        type: tool
+      height: 54
+      id: '1728498525620'
+      position:
+        x: 908.7499445197068
+        y: 598.7148278212392
+      positionAbsolute:
+        x: 908.7499445197068
+        y: 598.7148278212392
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        provider_id: serper
+        provider_name: serper
+        provider_type: builtin
+        selected: false
+        title: Customer Serper
+        tool_configurations: {}
+        tool_label: Serper
+        tool_name: serper
+        tool_parameters:
+          query:
+            type: mixed
+            value: '{{#17284997857760.text#}}'
+        type: tool
+      height: 54
+      id: '17284985881090'
+      position:
+        x: 908.7499445197068
+        y: 904.672259894535
+      positionAbsolute:
+        x: 908.7499445197068
+        y: 904.672259894535
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        provider_id: serper
+        provider_name: serper
+        provider_type: builtin
+        selected: false
+        title: Financial Serper
+        tool_configurations: {}
+        tool_label: Serper
+        tool_name: serper
+        tool_parameters:
+          query:
+            type: mixed
+            value: '{{#17284998508340.text#}}'
+        type: tool
+      height: 54
+      id: '17284985936280'
+      position:
+        x: 908.7499445197068
+        y: 1187.3900652622929
+      positionAbsolute:
+        x: 908.7499445197068
+        y: 1187.3900652622929
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - sys
+          - query
+        desc: ''
+        memory:
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: false
+            size: 50
+        model:
+          completion_params:
+            frequency_penalty: 0
+            max_tokens: 512
+            presence_penalty: 0
+            temperature: 0.5
+            top_p: 1
+          mode: chat
+          name: mixtral-8x7b-32768
+          provider: groq
+        prompt_template:
+        - id: 6a95fc20-5a7c-4fd4-a577-9cdd9b5ccf98
+          role: system
+          text: "{{#context#}}\n<instructions>\nYou are a router LLM that takes in\
+            \ user queries and rewrites them into specific, answerable questions for\
+            \ specialized LLM sub-agents. You have three sub-agents at your disposal:\
+            \ <Market Analysis/>, <Customer Insights/>, and <Financial Modeling/>.\
+            \  Your goal is to understand the user's intent and rewrite their query\
+            \ into a format suitable for ALL THREE of the available sub-agent classes.\
+            \ That means newly created questions for each <Market Analysis/>, <Customer\
+            \ Insights/>, and <Financial Modeling/> agent.\n\nEach user query will\
+            \ require one rewritten question tailored to a specific sub-agent class.\
+            \ Ensure the rewritten question fully encompasses the user's original\
+            \ query to guarantee a complete and accurate response. \n\n**Do not include\
+            \ any XML tags in your output.** \n\nHere's how to determine which sub-agent\
+            \ to route the query to:\n\n**Class 1: <Market Analysis/>**\n- Questions\
+            \ requiring analysis of market trends, competition, and opportunities\n\
+            - Utilizes both internal and external data to provide insights on market\
+            \ positioning\n\n**Class 2: <Customer Insights/>**\n- Questions focused\
+            \ on understanding patient needs, behaviors, and preferences\n- Analyzes\
+            \ customer data, feedback, and market research to inform strategy\n\n\
+            **Class 3: <Financial Modeling/>**\n- Questions related to pricing, revenue\
+            \ projections, and financial strategies\n- Uses financial data and market\
+            \ information to create models and projections\n</instructions>\n\n<examples>\n\
+            **Example 1**\nUser Query: \"What are the biggest challenges facing the\
+            \ company in the next year?\"\nRewritten Question: <Market Analysis/>:\
+            \ \"Considering market trends and competitive landscape, what are the\
+            \ most significant challenges our company might face in the coming year?\"\
+            \n\n**Example 2**\nUser Query: \"How do patients feel about our new drug\
+            \ compared to the competitor's?\"\nRewritten Question: <Customer Insights/>\
+            \ \"Based on patient feedback and market research, what are the perceived\
+            \ advantages and disadvantages of our new drug compared to our competitor's\
+            \ offering?\"\n\n**Example 3**\nUser Query: \"Can we project the ROI of\
+            \ launching this product in a new market?\"\nRewritten Question: <Financial\
+            \ Modeling/> \"Considering market data and projected sales, what is the\
+            \ estimated return on investment for launching this product in [target\
+            \ market]?\"\n</examples>\n"
+        selected: false
+        title: Problem Decomposition
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: '17284992856990'
+      position:
+        x: -310.21982493068316
+        y: 432.4846628040216
+      positionAbsolute:
+        x: -310.21982493068316
+        y: 432.4846628040216
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1728506860710'
+          - market_analysis
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.5
+          mode: chat
+          name: llama-3.1-8b-instant
+          provider: groq
+        prompt_template:
+        - edition_type: basic
+          id: 524a9bc9-10cc-4ba0-b822-ad4281671a23
+          role: system
+          text: "{{#context#}}\n<instructions>\nThis sub-agent is responsible for\
+            \ answering any queries related to **<Market Analysis/>** ONLY ANSWER\
+            \ THE QUESTION PERTAINING TO <Market Analysis/>. \n\nThis entails:\n-\
+            \ Addressing questions that require analysis of market trends.\n- Addressing\
+            \ questions that require analysis of competition within the market.\n\
+            - Addressing questions that require analysis of opportunities present\
+            \ in the market. \n- Utilizing both internal and external data to provide\
+            \ insights on market positioning.\n\nAnswer the user's query thoroughly\
+            \ and ensure the response is relevant to the topic of market analysis.\
+            \ \n\n**Important:** Do not include any XML tags in your output. \n\n\
+            - **Your Response Output should be formatted for a web search query and\
+            \ knowledge base query only!**\n</instructions>"
+        selected: false
+        title: Market Analysis
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: '1728499342927'
+      position:
+        x: 515.3904204164185
+        y: 432.4846628040216
+      positionAbsolute:
+        x: 515.3904204164185
+        y: 432.4846628040216
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '17285076478780'
+          - customer_insights
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.5
+          mode: chat
+          name: llama-3.1-8b-instant
+          provider: groq
+        prompt_template:
+        - edition_type: basic
+          id: 524a9bc9-10cc-4ba0-b822-ad4281671a23
+          role: system
+          text: "{{#context#}}\n<instructions>\nThis sub-agent is responsible for\
+            \ answering any queries related to **<Customer Insights/>**.  ONLY ANSWER\
+            \ THE QUESTION PERTAINING TO <Customer Insights/>.\n\nThis entails:\n\
+            - Addressing questions focused on understanding patient needs, behaviors,\
+            \ and preferences.\n- Analyzing customer data, feedback, and market research\
+            \ to inform strategy. \n\n- Answer the user's query thoroughly and ensure\
+            \ the response is relevant to the topic of customer insights. \n\n**Important:**\
+            \ Do not include any XML tags in your output. \n\n- **Your Response Output\
+            \ should be formatted for a web search query and knowledge base query\
+            \ only!**\n\n</instructions>\n\n"
+        selected: false
+        title: Customer Insights
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: '17284997857760'
+      position:
+        x: 515.3904204164185
+        y: 757.141030699645
+      positionAbsolute:
+        x: 515.3904204164185
+        y: 757.141030699645
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '17285076535550'
+          - financial_modeling
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.5
+          mode: chat
+          name: llama-3.1-8b-instant
+          provider: groq
+        prompt_template:
+        - edition_type: basic
+          id: 524a9bc9-10cc-4ba0-b822-ad4281671a23
+          role: system
+          text: '{{#context#}}
+
+            <instructions>
+
+            This sub-agent is responsible for queries related to <Financial Modeling>.
+            ONLY ANSWER THE QUESTION PERTAINING TO <Fiancial Modeling>. Use the following
+            guidelines to respond to the user queries:
+
+
+            - **Focus:** Your primary focus should be on addressing questions related
+            to Financial Modeling, specifically those concerning pricing, revenue
+            projections, and financial strategies.
+
+            - **Data Utilization:** Leverage financial data, market information, and
+            relevant models to formulate your responses.
+
+            - **Clarity and Conciseness:** Provide clear, concise, and easy-to-understand
+            answers.
+
+            - **Avoid Jargon:** Minimize the use of technical jargon and explain any
+            financial terms you use in a way that is accessible to a non-expert audience.
+
+            - **No XML Tags:** Ensure your output does not contain any XML tags.
+
+            - **Your Response Output should be formatted for a web search query and
+            knowledge base query only!**
+
+
+            </instructions>'
+        selected: false
+        title: Financial Modeling
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: '17284998508340'
+      position:
+        x: 515.3904204164185
+        y: 1048.3835840228292
+      positionAbsolute:
+        x: 515.3904204164185
+        y: 1048.3835840228292
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "def main(text: str) -> dict:\n    import re\n    \n    # Define the\
+          \ XML tag pattern specifically for <Market Analysis/> with optional bold\
+          \ markers\n    market_analysis_pattern = r\"(\\*\\*)?<Market Analysis/>(\\\
+          *\\*)?\\s*:\\s*\\\"(.*?)\\\"\"\n    \n    # Find the match for <Market Analysis/>\n\
+          \    match = re.search(market_analysis_pattern, text)\n    \n    # Extract\
+          \ the matched text or set as None if not found\n    market_analysis_result\
+          \ = match.group(3) if match else None\n    \n    # Return the result\n \
+          \   return {\n        'market_analysis': market_analysis_result\n    }\n"
+        code_language: python3
+        desc: ''
+        outputs:
+          market_analysis:
+            children: null
+            type: string
+        selected: false
+        title: Market Analysis Parse
+        type: code
+        variables:
+        - value_selector:
+          - '17284992856990'
+          - text
+          variable: text
+      height: 54
+      id: '1728506860710'
+      position:
+        x: 97.68659844523336
+        y: 432.4846628040216
+      positionAbsolute:
+        x: 97.68659844523336
+        y: 432.4846628040216
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "def main(text: str) -> dict:\n    import re\n    \n    # Define the\
+          \ XML tag pattern specifically for <Customer Insights/> with optional bold\
+          \ markers\n    customer_insights_pattern = r\"(\\*\\*)?<Customer Insights/>(\\\
+          *\\*)?\\s*:\\s*\\\"(.*?)\\\"\"\n    \n    # Find the match for <Customer\
+          \ Insights/>\n    match = re.search(customer_insights_pattern, text)\n \
+          \   \n    # Extract the matched text or set as None if not found\n    customer_insights_result\
+          \ = match.group(3) if match else None\n    \n    # Return the result\n \
+          \   return {\n        'customer_insights': customer_insights_result\n  \
+          \  }\n"
+        code_language: python3
+        desc: ''
+        outputs:
+          customer_insights:
+            children: null
+            type: string
+        selected: false
+        title: Customer Insights Parse
+        type: code
+        variables:
+        - value_selector:
+          - '17284992856990'
+          - text
+          variable: text
+      height: 54
+      id: '17285076478780'
+      position:
+        x: 91.45221304267841
+        y: 757.141030699645
+      positionAbsolute:
+        x: 91.45221304267841
+        y: 757.141030699645
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "def main(text: str) -> dict:\n    import re\n    \n    # Define the\
+          \ XML tag pattern specifically for <Financial Modeling/> with optional bold\
+          \ markers\n    financial_modeling_pattern = r\"(\\*\\*)?<Financial Modeling/>(\\\
+          *\\*)?\\s*:\\s*\\\"(.*?)\\\"\"\n    \n    # Find the match for <Financial\
+          \ Modeling/>\n    match = re.search(financial_modeling_pattern, text)\n\
+          \    \n    # Extract the matched text or set as None if not found\n    financial_modeling_result\
+          \ = match.group(3) if match else None\n    \n    # Return the result\n \
+          \   return {\n        'financial_modeling': financial_modeling_result\n\
+          \    }\n"
+        code_language: python3
+        desc: ''
+        outputs:
+          financial_modeling:
+            children: null
+            type: string
+        selected: false
+        title: Financial Modeling Parse
+        type: code
+        variables:
+        - value_selector:
+          - '17284992856990'
+          - text
+          variable: text
+      height: 54
+      id: '17285076535550'
+      position:
+        x: 91.45221304267841
+        y: 1048.3835840228292
+      positionAbsolute:
+        x: 91.45221304267841
+        y: 1048.3835840228292
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '17285103032100'
+          - Group2
+        desc: ''
+        memory:
+          query_prompt_template: '{{#sys.query#}}'
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: false
+            size: 50
+        model:
+          completion_params:
+            frequency_penalty: 0
+            max_tokens: 512
+            presence_penalty: 0
+            temperature: 0.5
+            top_p: 1
+          mode: chat
+          name: llama-3.1-8b-instant
+          provider: groq
+        prompt_template:
+        - id: 6a95fc20-5a7c-4fd4-a577-9cdd9b5ccf98
+          role: system
+          text: 'Use the following context as your learned knowledge, inside <context></context>
+            XML tags.
+
+            <context>
+
+            {{#context#}}
+
+            {{#17285103032100.Group1#}}
+
+            </context>'
+        selected: false
+        title: Customer AGG
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: '17285098919410'
+      position:
+        x: 1584.7349402054883
+        y: 757.141030699645
+      positionAbsolute:
+        x: 1584.7349402054883
+        y: 757.141030699645
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '17285103759130'
+          - Group2
+        desc: ''
+        memory:
+          query_prompt_template: '{{#sys.query#}}'
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: false
+            size: 50
+        model:
+          completion_params:
+            frequency_penalty: 0
+            max_tokens: 512
+            presence_penalty: 0
+            temperature: 0.5
+            top_p: 1
+          mode: chat
+          name: llama-3.1-8b-instant
+          provider: groq
+        prompt_template:
+        - id: 6a95fc20-5a7c-4fd4-a577-9cdd9b5ccf98
+          role: system
+          text: 'Use the following context as your learned knowledge, inside <context></context>
+            XML tags.
+
+            <context>
+
+            {{#context#}}
+
+            {{#17285103759130.Group1#}}
+
+            </context>'
+        selected: false
+        title: Financial AGG
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: '17285099013650'
+      position:
+        x: 1584.7349402054883
+        y: 1043.767701697165
+      positionAbsolute:
+        x: 1584.7349402054883
+        y: 1043.767701697165
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        advanced_settings:
+          group_enabled: true
+          groups:
+          - groupId: e665f150-ee0f-4e59-9fbf-65751315b792
+            group_name: Group1
+            output_type: string
+            variables:
+            - - '1728498525620'
+              - text
+          - groupId: ab5408da-1d40-4a85-a309-3914c2eb5c43
+            group_name: Group2
+            output_type: array[object]
+            variables:
+            - - '1711528768556'
+              - result
+            - - '1728571538391'
+              - json
+        desc: ''
+        output_type: string
+        selected: false
+        title: Market Variable Aggregator
+        type: variable-aggregator
+        variables:
+        - - '1728498525620'
+          - text
+      height: 196
+      id: '1728510226142'
+      position:
+        x: 1233.5148933536323
+        y: 432.4846628040216
+      positionAbsolute:
+        x: 1233.5148933536323
+        y: 432.4846628040216
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        advanced_settings:
+          group_enabled: true
+          groups:
+          - groupId: e665f150-ee0f-4e59-9fbf-65751315b792
+            group_name: Group1
+            output_type: string
+            variables:
+            - - '17284985881090'
+              - text
+          - groupId: b1c543c2-9199-4166-9e8b-99aa109458af
+            group_name: Group2
+            output_type: array[object]
+            variables:
+            - - '1711528770201'
+              - result
+            - - '17285716459190'
+              - json
+        desc: ''
+        output_type: string
+        selected: false
+        title: Customer Aggregator
+        type: variable-aggregator
+        variables:
+        - - '1728498525620'
+          - text
+      height: 196
+      id: '17285103032100'
+      position:
+        x: 1233.5148933536323
+        y: 757.141030699645
+      positionAbsolute:
+        x: 1233.5148933536323
+        y: 757.141030699645
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        advanced_settings:
+          group_enabled: true
+          groups:
+          - groupId: e665f150-ee0f-4e59-9fbf-65751315b792
+            group_name: Group1
+            output_type: string
+            variables:
+            - - '17284985936280'
+              - text
+          - groupId: b1c543c2-9199-4166-9e8b-99aa109458af
+            group_name: Group2
+            output_type: array[object]
+            variables:
+            - - '17284980569620'
+              - result
+            - - '17285716874730'
+              - json
+        desc: ''
+        output_type: string
+        selected: false
+        title: Financial Aggregator
+        type: variable-aggregator
+        variables:
+        - - '1728498525620'
+          - text
+      height: 196
+      id: '17285103759130'
+      position:
+        x: 1233.5148933536323
+        y: 1048.3835840228292
+      positionAbsolute:
+        x: 1233.5148933536323
+        y: 1048.3835840228292
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        advanced_settings:
+          group_enabled: true
+          groups:
+          - groupId: e665f150-ee0f-4e59-9fbf-65751315b792
+            group_name: Group1
+            output_type: string
+            variables:
+            - - '1711528815414'
+              - text
+            - - '17285099013650'
+              - text
+            - - '17285098919410'
+              - text
+        desc: ''
+        output_type: string
+        selected: false
+        title: Final Output
+        type: variable-aggregator
+        variables:
+        - - '1728498525620'
+          - text
+      height: 165
+      id: '17285105504790'
+      position:
+        x: 1871.2640031903165
+        y: 757.141030699645
+      positionAbsolute:
+        x: 1871.2640031903165
+        y: 757.141030699645
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1728574540053'
+          - output
+        desc: ''
+        memory:
+          query_prompt_template: '{{#sys.query#}}'
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: false
+            size: 50
+        model:
+          completion_params:
+            frequency_penalty: 0
+            max_tokens: 8192
+            presence_penalty: 0
+            temperature: 0.6
+            top_p: 0.9
+          mode: chat
+          name: llama-3.2-90b-text-preview
+          provider: groq
+        prompt_template:
+        - id: 6a95fc20-5a7c-4fd4-a577-9cdd9b5ccf98
+          role: system
+          text: "<instructions>\nYou are a Final Aggregate model tasked with providing\
+            \ a comprehensive and well-formatted response to a user's query. You will\
+            \ be provided with contextual information gathered by aub-agents within\
+            \ the <context> tags. Your response should effectively address the user's\
+            \ intent by leveraging this collected data. \n\nFollow these steps to\
+            \ complete your task:\n\n1. **Analyze the context:** Carefully examine\
+            \ the information provided within the {{#context#}} tags. This data has\
+            \ been compiled from various sources by the aub-agents and is crucial\
+            \ for formulating your response.\n2. **Identify user intent:** Determine\
+            \ the underlying question or request the user is making in the initial\
+            \ {{#sys.query#}}. This will guide you in selecting the most relevant\
+            \ information from the context.\n3. **Synthesize a comprehensive response:**\
+            \  Craft a well-structured response that directly addresses the user's\
+            \ intent. Ensure your response is informative, accurate, and easy to understand.\n\
+            4. **Cite your sources:**  For every piece of information used from the\
+            \ context, provide a clear citation indicating its origin. This ensures\
+            \ transparency and allows the user to trace back the information.\n5.\
+            \ **Format your response:** Present your answer in a clear and organized\
+            \ manner. Use proper grammar, punctuation, and formatting to enhance readability.\
+            \ \n6. **Do not include any XML tags in your response.**\n\nRemember,\
+            \ your goal is to provide a complete and informative answer to the user's\
+            \ query based on the provided context. \n\n#ALWAYS CITE YOUR SOURCES FROM\
+            \ THE KNOWLEDGE BASE, WEB SEARCH, AND SUB-AGENT RESPONSES SO THE USER\
+            \ CAN FOLLOW YOUR LOGIC AND RESPONSE!\n</instructions>\n\n<example>\n\
+            Sources:\nMarket Analyst: {content}\nCustomer Insights: {content}\nFinancial\
+            \ Modeling: {content}\n\nCitations:\n{citations}\n</example>"
+        selected: false
+        title: Final AGG
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: '17285109422410'
+      position:
+        x: 3318.616089065707
+        y: 757.141030699645
+      positionAbsolute:
+        x: 3318.616089065707
+        y: 757.141030699645
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        provider_id: webscraper
+        provider_name: webscraper
+        provider_type: builtin
+        selected: false
+        title: Market Scraper
+        tool_configurations:
+          generate_summary: 1
+          user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/100.0.1000.0 Safari/537.36
+        tool_label: Web Scraper
+        tool_name: webscraper
+        tool_parameters:
+          url:
+            type: mixed
+            value: '{{#1711528708197.url_market#}}'
+        type: tool
+      height: 116
+      id: '1728571538391'
+      position:
+        x: -310.21982493068316
+        y: -78.56604304029634
+      positionAbsolute:
+        x: -310.21982493068316
+        y: -78.56604304029634
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        provider_id: webscraper
+        provider_name: webscraper
+        provider_type: builtin
+        selected: false
+        title: Customer Scraper
+        tool_configurations:
+          generate_summary: 1
+          user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/100.0.1000.0 Safari/537.36
+        tool_label: Web Scraper
+        tool_name: webscraper
+        tool_parameters:
+          url:
+            type: mixed
+            value: '{{#1711528708197.url_customer#}}'
+        type: tool
+      height: 116
+      id: '17285716459190'
+      position:
+        x: -310.21982493068316
+        y: 58.9439555465527
+      positionAbsolute:
+        x: -310.21982493068316
+        y: 58.9439555465527
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        provider_id: webscraper
+        provider_name: webscraper
+        provider_type: builtin
+        selected: false
+        title: Financial Scraper
+        tool_configurations:
+          generate_summary: 1
+          user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/100.0.1000.0 Safari/537.36
+        tool_label: Web Scraper
+        tool_name: webscraper
+        tool_parameters:
+          url:
+            type: mixed
+            value: '{{#1711528708197.url_financial#}}'
+        type: tool
+      height: 116
+      id: '17285716874730'
+      position:
+        x: -310.21982493068316
+        y: 209.95067062514602
+      positionAbsolute:
+        x: -310.21982493068316
+        y: 209.95067062514602
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '17285105504790'
+          - Group1
+        desc: ''
+        memory:
+          query_prompt_template: '{{#sys.query#}}'
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: false
+            size: 50
+        model:
+          completion_params:
+            frequency_penalty: 0
+            max_tokens: 1024
+            presence_penalty: 0
+            temperature: 0.5
+            top_p: 1
+          mode: chat
+          name: llama-3.1-70b-versatile
+          provider: groq
+        prompt_template:
+        - id: 6a95fc20-5a7c-4fd4-a577-9cdd9b5ccf98
+          role: system
+          text: "<instruction>\nYou are a Quality Assessment model tasked with providing\
+            \ a comprehensive quality assessment of the provided data within your\
+            \ context. You will be provided with contextual information gathered by\
+            \ sub-agents within the {{#context#}} tags. Your response should effectively\
+            \ address the user's intent by leveraging this collected data. \n\nFollow\
+            \ these steps to complete your task:\n\n1. **Analyze the context:** Carefully\
+            \ examine the information provided within the {{#context#}} tags. This\
+            \ data has been compiled from various sources by the sub-agents and is\
+            \ crucial for formulating your response.\n2. **Identify user intent:**\
+            \ Determine the underlying question or request the user is making here:\
+            \ {{#sys.query#}} . This will guide you in selecting the most relevant\
+            \ information from the context.\n3. **Synthesize a comprehensive response:**\
+            \  Craft a well-structured response that directly addresses the user's\
+            \ intent. Ensure your response is informative, accurate, and easy to understand.\n\
+            4. **Cite your sources:**  For every piece of information used from the\
+            \ context, provide a clear citation indicating its origin. This ensures\
+            \ transparency and allows the user to trace back the information.\n5.\
+            \ **Format your response:** Present your answer in a clear and organized\
+            \ manner. Use proper grammar, punctuation, and formatting to enhance readability.\
+            \ \n6. **Do not include any XML tags in your response.**\n\nRemember,\
+            \ your goal is to provide a complete and informative answer to the user's\
+            \ query based on the provided context. \n\nIf there is a need for more\
+            \ information, you can choose to continue searching the web with a search\
+            \ query to gather the missing and needed data.\n</instruction>\n\n"
+        selected: false
+        title: Quality Assesment AGG
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: '17285737847610'
+      position:
+        x: 2290.2816676981624
+        y: 757.141030699645
+      positionAbsolute:
+        x: 2290.2816676981624
+        y: 757.141030699645
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        advanced_settings:
+          group_enabled: true
+          groups:
+          - groupId: adf9e581-f637-4b98-b453-bd73f4e7fbab
+            group_name: Group1
+            output_type: array[object]
+            variables:
+            - - '1728592461145'
+              - json
+            - - '1728594085610'
+              - json
+          - groupId: 79cf1d5d-285c-4b90-bb33-bafc7eacb605
+            group_name: Group2
+            output_type: object
+            variables:
+            - - '1728593613737'
+              - output
+        desc: ''
+        output_type: array[object]
+        selected: false
+        title: QA AGG
+        type: variable-aggregator
+        variables:
+        - - '1728592461145'
+          - json
+      height: 196
+      id: '1728574540053'
+      position:
+        x: 2996.523917026094
+        y: 757.141030699645
+      positionAbsolute:
+        x: 2996.523917026094
+        y: 757.141030699645
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        provider_id: jina
+        provider_name: jina
+        provider_type: builtin
+        selected: false
+        title: Search the web
+        tool_configurations:
+          gather_all_images_at_the_end: 0
+          gather_all_links_at_the_end: 1
+          image_caption: 1
+          max_retries: 3
+          no_cache: 1
+          proxy_server: null
+        tool_label: Search the web
+        tool_name: jina_search
+        tool_parameters:
+          query:
+            type: mixed
+            value: '{{#17285737847610.text#}}'
+        type: tool
+      height: 220
+      id: '1728592461145'
+      position:
+        x: 2666.467968086327
+        y: 757.141030699645
+      positionAbsolute:
+        x: 2666.467968086327
+        y: 757.141030699645
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        output_type: object
+        selected: false
+        title: Agent Output Agg
+        type: variable-aggregator
+        variables:
+        - - '17285105504790'
+          - Group1
+      height: 113
+      id: '1728593613737'
+      position:
+        x: 2290.2816676981624
+        y: 520.6631559149458
+      positionAbsolute:
+        x: 2290.2816676981624
+        y: 520.6631559149458
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        provider_id: arxiv
+        provider_name: arxiv
+        provider_type: builtin
+        selected: false
+        title: Arxiv Search
+        tool_configurations: {}
+        tool_label: Arxiv Search
+        tool_name: arxiv_search
+        tool_parameters:
+          query:
+            type: mixed
+            value: '{{#17285737847610.text#}}'
+        type: tool
+      height: 54
+      id: '1728594085610'
+      position:
+        x: 2290.2816676981624
+        y: 661.9689915266133
+      positionAbsolute:
+        x: 2290.2816676981624
+        y: 661.9689915266133
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1728659963759'
+          - output
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.2
+            top_p: 1
+          mode: chat
+          name: mixtral-8x7b-32768
+          provider: groq
+        prompt_template:
+        - id: 8dae3b56-d8d5-402d-8037-75e1a92424f2
+          role: system
+          text: '{{#context#}}
+
+            <instructions>
+
+            This agent''s job is to generate a linear chart using the provided data.
+            Ensure the chart data is in JSON format and contains the necessary elements
+            to build the chart. The JSON must include:
+
+            - "data": a semicolon-separated string of categories (e.g., "Label1;Label2;Label3").
+
+            - "values": a semicolon-separated string of numerical values (e.g., "Value1;Value2;Value3").
+
+
+            Make sure to output the JSON directly without any additional text or formatting.
+            The values should be floats, and the labels should remain as strings.
+
+            </instructions>
+
+
+            <examples>
+
+            Example 1:
+
+            Input Data: Stock price of Company A over a week (Monday to Friday): 150,
+            155, 148, 152, 158
+
+            Output JSON:
+
+            {"data": "Monday;Tuesday;Wednesday;Thursday;Friday", "values": "150;155;148;152;158"}
+
+
+            Example 2:
+
+            Input Data: Temperature readings: 10:00 AM - 25°C, 12:00 PM - 28°C, 2:00
+            PM - 30°C, 4:00 PM - 29°C
+
+            Output JSON:
+
+            {"data": "10:00 AM;12:00 PM;2:00 PM;4:00 PM", "values": "25;28;30;29"}
+
+
+            Example 3:
+
+            Input Data: Survey results over 4 categories: Age group 18-64 - 14.8%,
+            Below 200% FPL - 23.6%, Uninsured - 34.6%, High School or Less - 18.1%
+
+            Output JSON:
+
+            {"data": "18-64 years;Below 200% FPL;Uninsured;High School or Less", "values":
+            "14.8;23.6;34.6;18.1"}
+
+            </examples>
+
+            </instructions>
+
+            '
+        selected: false
+        title: Chart Gen
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: '1728659317649'
+      position:
+        x: 3917.7586201258305
+        y: 899.8074727437278
+      positionAbsolute:
+        x: 3917.7586201258305
+        y: 899.8074727437278
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        advanced_settings:
+          group_enabled: true
+          groups:
+          - groupId: fce42efe-13e7-495a-9f4f-85db6bdb1335
+            group_name: Group1
+            output_type: object
+            variables:
+            - - '1728574540053'
+              - Group1
+            - - '1728574540053'
+              - Group2
+          - groupId: 6644e12f-2918-47c0-a838-506bcb456803
+            group_name: Group2
+            output_type: object
+            variables:
+            - - '1728593613737'
+              - output
+        desc: ''
+        output_type: object
+        selected: false
+        title: Chart Aggregator
+        type: variable-aggregator
+        variables:
+        - - '1728574540053'
+          - Group1
+        - - '1728574540053'
+          - Group2
+      height: 196
+      id: '1728659524318'
+      position:
+        x: 3318.616089065707
+        y: 899.8074727437278
+      positionAbsolute:
+        x: 3318.616089065707
+        y: 899.8074727437278
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        selected: false
+        template: '{{ search_results }}
+
+          {{ text }}'
+        title: Template
+        type: template-transform
+        variables:
+        - value_selector:
+          - '1728659524318'
+          - Group1
+          variable: search_results
+        - value_selector:
+          - '17285109422410'
+          - text
+          variable: text
+      height: 54
+      id: '1728659963759'
+      position:
+        x: 3608.4670213973177
+        y: 899.8074727437278
+      positionAbsolute:
+        x: 3608.4670213973177
+        y: 899.8074727437278
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1728506860710'
+          - market_analysis
+        desc: ''
+        model:
+          completion_params:
+            max_tokens: 256
+            temperature: 0.5
+          mode: chat
+          name: llama-3.1-8b-instant
+          provider: groq
+        prompt_template:
+        - edition_type: basic
+          id: 524a9bc9-10cc-4ba0-b822-ad4281671a23
+          role: system
+          text: "{{#context#}}\n<instructions>\nThis sub-agent is responsible for\
+            \ conducting search queries related to **Market Analysis**. You must keep\
+            \ your queries short and brief using the best web search practices.  Your\
+            \ goal is to generate concise and effective search engine queries that\
+            \ will retrieve relevant information for market analysis. \n\nTo accomplish\
+            \ this, follow these steps:\n\n1. **Understand the User's Information\
+            \ Need:** Carefully analyze the user's input to determine the specific\
+            \ information they are seeking regarding market analysis.\n2. **Identify\
+            \ Key Concepts:**  Extract the most relevant keywords and phrases related\
+            \ to market analysis from the user's input.\n3. **Formulate a Search Query:**\
+            \ Construct a clear and focused search query using the identified key\
+            \ concepts. \n4. **Keep it Concise:** Aim for brevity in your query, using\
+            \ only the most essential terms.\n5. **Use Quotation Marks When Necessary:**\
+            \  If the user's input includes a specific phrase that should be searched\
+            \ verbatim, enclose that phrase in quotation marks.\n6. **Consider Search\
+            \ Operators:**  Use search operators (e.g., AND, OR, NOT) to refine your\
+            \ query if needed, ensuring they align with common search engine syntax.\n\
+            7. **Avoid XML Tags:** Do not include any XML tags in your output. \n\n\
+            **Important:** Do not include any XML tags in your output. \n\n- **Your\
+            \ Response Output should be formatted for a web search query only!**\n\
+            </instructions>\n\n<examples>\n<example>\nUser Input: \"What are the key\
+            \ trends shaping the electric vehicle market?\"\nOutput: \"electric vehicle\
+            \ market trends\" \n</example>\n\n<example>\nUser Input: \"Who are the\
+            \ main competitors in the cloud computing market?\"\nOutput: \"cloud computing\
+            \ market competitors\"\n</example>\n\n<example>\nUser Input: \"What are\
+            \ the biggest market opportunities in renewable energy?\"\nOutput: \"\
+            renewable energy market opportunities\"\n</example>\n</examples>\n"
+        selected: false
+        title: Market Analysis (1)
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: '17286602571650'
+      position:
+        x: 515.3904204164185
+        y: 560.5260144403808
+      positionAbsolute:
+        x: 515.3904204164185
+        y: 560.5260144403808
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '17285076478780'
+          - customer_insights
+        desc: ''
+        model:
+          completion_params:
+            max_tokens: 256
+            temperature: 0.5
+          mode: chat
+          name: llama-3.1-8b-instant
+          provider: groq
+        prompt_template:
+        - edition_type: basic
+          id: 524a9bc9-10cc-4ba0-b822-ad4281671a23
+          role: system
+          text: "{{#context#}}\n<instructions>\nThis sub-agent is responsible for\
+            \ conducting search queries related to **Customer Insights**. You must\
+            \ keep your queries short and brief using the best web search practices.\
+            \  Your goal is to generate concise and effective search engine queries\
+            \ that will retrieve relevant information for understanding customer needs,\
+            \ behaviors, and preferences.\n\nTo accomplish this, follow these steps:\n\
+            \n1. **Understand the User's Information Need:** Carefully analyze the\
+            \ user's input to determine the specific information they are seeking\
+            \ regarding customer insights. What aspects of customer behavior, opinions,\
+            \ or demographics are they interested in?\n2. **Identify Key Concepts:**\
+            \  Extract the most relevant keywords and phrases related to customer\
+            \ insights from the user's input. Focus on terms that directly relate\
+            \ to customer demographics, preferences, pain points, motivations, or\
+            \ feedback. \n3. **Formulate a Search Query:** Construct a clear and focused\
+            \ search query using the identified key concepts. Frame the query in a\
+            \ way that targets customer-centric information.\n4. **Keep it Concise:**\
+            \ Aim for brevity in your query, using only the most essential terms.\n\
+            5. **Use Quotation Marks When Necessary:**  If the user's input includes\
+            \ a specific phrase that should be searched verbatim, enclose that phrase\
+            \ in quotation marks.\n6. **Consider Search Operators:**  Use search operators\
+            \ (e.g., AND, OR, NOT) to refine your query if needed, ensuring they align\
+            \ with common search engine syntax.\n7. **Avoid XML Tags:** Do not include\
+            \ any XML tags in your output. \n\n**Important:** Do not include any XML\
+            \ tags in your output. \n\n- **Your Response Output should be formatted\
+            \ for a web search query only!**\n</instructions>\n\n<example>\nUser Input:\
+            \ \"What are the main reasons customers choose our competitor's product\
+            \ over ours?\"\nOutput: \"reasons customers prefer competitor products\"\
+            \ \n</example>\n\n<example>\nUser Input: \"How has customer sentiment\
+            \ towards our brand changed over the past year?\"\nOutput: \"brand sentiment\
+            \ analysis year over year\"\n</example>\n\n<example>\nUser Input: \"What\
+            \ are the key demographics of customers who purchase our premium subscription?\"\
+            \nOutput: \"premium subscription customer demographics\"\n</example> \n"
+        selected: false
+        title: Customer Insights (1)
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: '17286602800460'
+      position:
+        x: 515.3904204164185
+        y: 883.5178069476167
+      positionAbsolute:
+        x: 515.3904204164185
+        y: 883.5178069476167
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '17285076535550'
+          - financial_modeling
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.5
+          mode: chat
+          name: llama-3.1-8b-instant
+          provider: groq
+        prompt_template:
+        - edition_type: basic
+          id: 524a9bc9-10cc-4ba0-b822-ad4281671a23
+          role: system
+          text: "{{#context#}}\n<instructions>\nThis sub-agent is responsible for\
+            \ conducting search queries related to **Financial Modeling**. You must\
+            \ keep your queries short and brief using the best web search practices.\
+            \  Your goal is to generate concise and effective search engine queries\
+            \ that will retrieve relevant information for building robust and accurate\
+            \ financial models. \n\nTo accomplish this, follow these steps:\n\n1.\
+            \ **Understand the User's Information Need:** Carefully analyze the user's\
+            \ input to determine the specific information they are seeking regarding\
+            \ financial modeling. What specific financial metrics, forecasting techniques,\
+            \ or industry benchmarks are they interested in?\n2. **Identify Key Concepts:**\
+            \  Extract the most relevant keywords and phrases related to financial\
+            \ modeling from the user's input. Focus on terms that directly relate\
+            \ to financial statements, valuation, forecasting, risk analysis, or specific\
+            \ modeling techniques.\n3. **Formulate a Search Query:** Construct a clear\
+            \ and focused search query using the identified key concepts. Frame the\
+            \ query in a way that targets financial modeling resources and information.\
+            \ \n4. **Keep it Concise:** Aim for brevity in your query, using only\
+            \ the most essential terms.\n5. **Use Quotation Marks When Necessary:**\
+            \  If the user's input includes a specific phrase that should be searched\
+            \ verbatim, enclose that phrase in quotation marks.\n6. **Consider Search\
+            \ Operators:**  Use search operators (e.g., AND, OR, NOT) to refine your\
+            \ query if needed, ensuring they align with common search engine syntax.\n\
+            7. **Avoid XML Tags:** Do not include any XML tags in your output. \n\n\
+            **Important:** Do not include any XML tags in your output. \n\n- **Your\
+            \ Response Output should be formatted for a web search query only!** \n\
+            </instructions>\n\n<example>\nUser Input: \"What are the best methods\
+            \ for forecasting revenue for a SaaS company?\"\nOutput: \"SaaS revenue\
+            \ forecasting methods\" \n</example>\n\n<example>\nUser Input: \"How do\
+            \ I calculate the weighted average cost of capital (WACC) for a discounted\
+            \ cash flow (DCF) model?\"\nOutput: \"WACC calculation discounted cash\
+            \ flow\"\n</example>\n\n<example>\nUser Input: \"What are the most common\
+            \ financial ratios used in equity research valuation?\"\nOutput: \"equity\
+            \ research valuation financial ratios\"\n</example> "
+        selected: false
+        title: Financial Modeling (1)
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: '17286603081920'
+      position:
+        x: 515.3904204164185
+        y: 1187.3900652622929
+      positionAbsolute:
+        x: 515.3904204164185
+        y: 1187.3900652622929
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        instruction: '{{#1728659317649.text#}}
+
+          <instructions>
+
+          This agent''s job is to generate a linear chart using the provided data.
+          Ensure the chart data is in JSON format and contains the necessary elements
+          to build the chart. The JSON must include:
+
+          - "data": a semicolon-separated string of categories (e.g., "Label1;Label2;Label3").
+
+          - "values": a semicolon-separated string of numerical values (e.g., "Value1;Value2;Value3").
+
+
+          Make sure to output the JSON directly without any additional text or formatting.
+          The values should be floats, and the labels should remain as strings.
+
+          </instructions>
+
+
+          <examples>
+
+          Example 1:
+
+          Input Data: Stock price of Company A over a week (Monday to Friday): 150,
+          155, 148, 152, 158
+
+          Output JSON:
+
+          {"data": "Monday;Tuesday;Wednesday;Thursday;Friday", "values": "150;155;148;152;158"}
+
+
+          Example 2:
+
+          Input Data: Temperature readings: 10:00 AM - 25°C, 12:00 PM - 28°C, 2:00
+          PM - 30°C, 4:00 PM - 29°C
+
+          Output JSON:
+
+          {"data": "10:00 AM;12:00 PM;2:00 PM;4:00 PM", "values": "25;28;30;29"}
+
+
+          Example 3:
+
+          Input Data: Survey results over 4 categories: Age group 18-64 - 14.8%, Below
+          200% FPL - 23.6%, Uninsured - 34.6%, High School or Less - 18.1%
+
+          Output JSON:
+
+          {"data": "18-64 years;Below 200% FPL;Uninsured;High School or Less", "values":
+          "14.8;23.6;34.6;18.1"}
+
+          </examples>
+
+          </instructions>
+
+          '
+        model:
+          completion_params:
+            response_format: JSON
+            temperature: 0.5
+          mode: chat
+          name: gemini-1.5-pro
+          provider: google
+        parameters:
+        - description: data for generating bar chart, data should be a string contains
+            a list of numbers like "1;2;3;4;5"
+          name: data
+          options: []
+          required: true
+          type: string
+        - description: x axis for bar chart, x axis should be a string contains a
+            list of texts like "a;b;c;1;2" in order to match the data
+          name: x_axis
+          options: []
+          required: false
+          type: string
+        query:
+        - '1728659317649'
+        - text
+        reasoning_mode: prompt
+        selected: false
+        title: Chart Extractor
+        type: parameter-extractor
+        variables: []
+      height: 98
+      id: '1728665246556'
+      position:
+        x: 4192.998038687897
+        y: 899.8074727437278
+      positionAbsolute:
+        x: 4192.998038687897
+        y: 899.8074727437278
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        provider_id: chart
+        provider_name: chart
+        provider_type: builtin
+        selected: false
+        title: Linear Chart
+        tool_configurations: {}
+        tool_label: Linear Chart
+        tool_name: line_chart
+        tool_parameters:
+          data:
+            type: mixed
+            value: '{{#1728665246556.data#}}'
+          x_axis:
+            type: mixed
+            value: '{{#1728665246556.x_axis#}}'
+        type: tool
+      height: 54
+      id: '1728665847646'
+      position:
+        x: 4530.579247212933
+        y: 899.8074727437278
+      positionAbsolute:
+        x: 4530.579247212933
+        y: 899.8074727437278
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: '{{#1728665847646.files#}}{{#1728666147402.files#}}'
+        desc: ''
+        selected: false
+        title: Answer 2
+        type: answer
+        variables: []
+      height: 125
+      id: '1728665809969'
+      position:
+        x: 5126.989531242323
+        y: 883.5178069476167
+      positionAbsolute:
+        x: 5126.989531242323
+        y: 883.5178069476167
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        instruction: "{{#1728659317649.text#}}\n<instructions>\nThis agent's job is\
+          \ to generate a pie chart using the provided data. Ensure the chart data\
+          \ is in JSON format and contains the necessary elements to build the chart.\
+          \ The JSON must include:\n- \"categories\": a semicolon-separated string\
+          \ of categories (e.g., \"Category1;Category2;Category3\").\n- \"data\":\
+          \ a semicolon-separated string of numerical values (e.g., \"Value1;Value2;Value3\"\
+          ).\n\nMake sure to output the JSON directly without any additional text\
+          \ or formatting. The values should be floats, and the categories should\
+          \ remain as strings.\n</instructions>\n\n<examples>\nExample 1:\nInput Data:\
+          \ Market share of four tech companies: Company A - 40%, Company B - 25%,\
+          \ Company C - 20%, Company D - 15%\nOutput JSON:\n{\"categories\": \"Company\
+          \ A;Company B;Company C;Company D\", \"data\": \"40;25;20;15\"}\n\nExample\
+          \ 2:\nInput Data: Distribution of survey responses: Agree - 45%, Disagree\
+          \ - 30%, Neutral - 25%\nOutput JSON:\n{\"categories\": \"Agree;Disagree;Neutral\"\
+          , \"data\": \"45;30;25\"}\n\nExample 3:\nInput Data: Population distribution\
+          \ by age groups: 0-18 - 20%, 19-35 - 35%, 36-50 - 25%, 51+ - 20%\nOutput\
+          \ JSON:\n{\"categories\": \"0-18;19-35;36-50;51+\", \"data\": \"20;35;25;20\"\
+          }\n</examples> \nDO NOT INCLUDE ANY TEXT OTHER THAN THE JSON! \nYOU MUST\
+          \ USE ONLY \"categories\" AND \"data\" FOR KEYS, NOTHING ELSE!\n</instructions>\n"
+        model:
+          completion_params:
+            response_format: JSON
+            temperature: 0.5
+          mode: chat
+          name: gemini-1.5-pro
+          provider: google
+        parameters:
+        - description: data for generating pie chart, data should be a string contains
+            a list of numbers like "1;2;3;4;5"
+          name: data
+          options: []
+          required: true
+          type: string
+        - description: categories for pie chart, categories should be a string contains
+            a list of texts like "a;b;c;1;2" in order to match the data, each category
+            should be split by ";"
+          name: categories
+          options: []
+          required: true
+          type: string
+        query:
+        - '1728659317649'
+        - text
+        reasoning_mode: prompt
+        selected: false
+        title: Chart Extractor (1)
+        type: parameter-extractor
+        variables: []
+      height: 98
+      id: '17286660442350'
+      position:
+        x: 4192.998038687897
+        y: 1048.3835840228292
+      positionAbsolute:
+        x: 4192.998038687897
+        y: 1048.3835840228292
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        provider_id: chart
+        provider_name: chart
+        provider_type: builtin
+        selected: false
+        title: Pie Chart
+        tool_configurations: {}
+        tool_label: Pie Chart
+        tool_name: pie_chart
+        tool_parameters:
+          categories:
+            type: mixed
+            value: '{{#17286660442350.categories#}}'
+          data:
+            type: mixed
+            value: '{{#17286660442350.data#}}'
+        type: tool
+      height: 54
+      id: '1728666147402'
+      position:
+        x: 4523.1358292676305
+        y: 1051.396662593306
+      positionAbsolute:
+        x: 4523.1358292676305
+        y: 1051.396662593306
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: 'Expert Sub-Agent Responses:
+
+          {{#1728593613737.output#}}'
+        desc: ''
+        selected: false
+        title: Answer 3
+        type: answer
+        variables: []
+      height: 123
+      id: '1728666356996'
+      position:
+        x: 5449.0166228997905
+        y: 883.5178069476167
+      positionAbsolute:
+        x: 5449.0166228997905
+        y: 883.5178069476167
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    viewport:
+      x: -1218.110148091857
+      y: 6.386144110608143
+      zoom: 0.4332866089068398
